@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "e2def1bf-6385-48a9-80b0-b15cebb87edf",
+		"name": "E_Commerce_API Postman Methods",
+		"description": "CRUD Methods for E_Commerce_API Mini Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41663464"
+	},
+	"item": [
+		{
+			"name": "Welcome Method",
+			"item": [
+				{
+					"name": "Welcome",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Welcome Method for E_Commerce_API"
+		},
+		{
+			"name": "Find Methods",
+			"item": [
+				{
+					"name": "Find All Customers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find Customer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Customer Accounts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find Customer Account",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Orders",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find Customer Orders",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find Order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Find Methods for E_Commerce_API"
+		},
+		{
+			"name": "Add Methods",
+			"item": [
+				{
+					"name": "Add Customers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer Account",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Add Methods for E_Commerce_API"
+		},
+		{
+			"name": "Delete Methods",
+			"item": [
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer Account",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Orders",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Delete Methods for E_Commerce_API"
+		},
+		{
+			"name": "Update Methods",
+			"item": [
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer Account",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Update Methods for E_Commerce_API"
+		}
+	]
+}
