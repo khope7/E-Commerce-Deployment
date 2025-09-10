@@ -17,6 +17,7 @@ class CustomerSchema(ma.Schema):
     name = fields.String(required=True)
     email = fields.String(required=True)
     phone = fields.String(required=True)
+    id = db.Column(db.Integer, primary_key=True)
 
     class Meta:
         fields = ("name", "email", "phone", "id")    
@@ -30,6 +31,7 @@ class CustomerAccountSchema(ma.Schema):
     customer_id = fields.Integer(required=True)
     username = fields.String(required=True)
     password = fields.String(required=True)
+    id = db.Column(db.Integer, primary_key=True)
 
     class Meta:
         fields = ("customer_id", "username", "password", "id")
@@ -41,6 +43,7 @@ customer_accounts_schema = CustomerAccountSchema(many=True)
 class ProductSchema(ma.Schema):
     name = fields.String(required=True)
     price = fields.Float(required=True)
+    id = db.Column(db.Integer, primary_key=True)
 
     class Meta:
         fields = ("name", "price", "id")    
@@ -60,6 +63,7 @@ class OrderSchema(ma.Schema):
     customer_id = fields.Integer(required=True)
     date = fields.String(required=True)
     products = fields.List(fields.Nested(ProductOrderSchema))
+    id = db.Column(db.Integer, primary_key=True)
     
 
     class Meta:
