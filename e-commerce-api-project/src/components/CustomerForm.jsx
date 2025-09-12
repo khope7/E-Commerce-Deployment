@@ -20,7 +20,7 @@ const CustomerForm = () => {
         if (id) {
             const fetchCustomerDetails = async () => {
                 try {
-                    const response = await axios.get(`${process.env.REACT_APP_API_URL}process.env.REACT_APP_API_URL/customers/by-id?id=${id}`);
+                    const response = await axios.get(`${process.env.REACT_APP_API_URL}/customers/by-id?id=${id}`);
                     setName(response.data.name);
                     setEmail(response.data.email);
                     setPhone(response.data.phone);
@@ -60,7 +60,7 @@ const CustomerForm = () => {
                 setEmail('');
                 setPhone('');
                 setSubmitting(false);
-                navigate(`${process.env.REACT_APP_API_URL}/customers`);
+                navigate(`/customers`);
             } catch (error) {
                 console.error('Error submitting the customer:', error);
                 setError(error.toString());
