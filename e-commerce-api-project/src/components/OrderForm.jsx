@@ -31,7 +31,7 @@ const OrderForm = () => {
                 setError(null);
                 const customerData = { customer_id, date, products };
                 try {
-                    await axios.post('orders', customerData);
+                    await axios.post('/orders', customerData);
                     setCustomerId(1);
                     setDate('');
                     setProductIds([]);

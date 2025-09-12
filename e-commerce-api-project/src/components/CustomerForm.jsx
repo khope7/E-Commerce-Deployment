@@ -20,7 +20,7 @@ const CustomerForm = () => {
         if (id) {
             const fetchCustomerDetails = async () => {
                 try {
-                    const response = await axios.get(`customers/by-id?id=${id}`);
+                    const response = await axios.get(`/customers/by-id?id=${id}`);
                     setName(response.data.name);
                     setEmail(response.data.email);
                     setPhone(response.data.phone);
@@ -52,9 +52,9 @@ const CustomerForm = () => {
             const customerData = { name, email, phone };
             try {
                 if (id) {
-                    await axios.put(`customers/${id}`, customerData);
+                    await axios.put(`/customers/${id}`, customerData);
                 } else {
-                    await axios.post('customers', customerData);
+                    await axios.post('/customers', customerData);
                 }
                 setName('');
                 setEmail('');

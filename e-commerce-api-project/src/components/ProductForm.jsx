@@ -25,7 +25,7 @@ const ProductForm = () => {
         if (named) {
             const fetchProductDetails = async () => {
                 try {
-                    const response = await axios.get(`products/by-name?name=${named}`);
+                    const response = await axios.get(`/products/by-name?name=${named}`);
                     setName(response.data.name);
                     setPrice(response.data.price);
                     setId(response.data.id)
@@ -55,9 +55,9 @@ const ProductForm = () => {
             const productData = { name, price };
             try {
                 if (named) {
-                    await axios.put(`products/${id}`, productData);
+                    await axios.put(`/products/${id}`, productData);
                 } else {
-                    await axios.post('products', productData);
+                    await axios.post('/products', productData);
                 }
                 setName('');
                 setPrice('');
