@@ -16,7 +16,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('/products');
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/products`);
             setProducts(response.data);   
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -25,7 +25,7 @@ const ProductList = () => {
 
     const deleteProduct = async (id) => {
         try {
-            await axios.delete(`/products/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/products/${id}`);
                 fetchProducts();
         } catch (error) {
             console.error('Error deleting product:', error);

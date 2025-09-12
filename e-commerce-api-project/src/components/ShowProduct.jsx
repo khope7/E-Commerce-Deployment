@@ -15,7 +15,7 @@ const ShowProduct = () => {
         if (named) {
             const fetchProductDetails = async () => {
                 try {
-                    const response = await axios.get(`/products/by-name?name=${named}`);
+                    const response = await axios.get(`${process.env.REACT_APP_API_URL}/products/by-name?name=${named}`);
                     productArray.push(response.data)
                     setProduct(productArray);
                 } catch (error) {
