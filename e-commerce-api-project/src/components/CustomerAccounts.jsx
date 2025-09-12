@@ -10,7 +10,7 @@ const CustomerAccountList = () => {
 
     const fetchCustomerAccounts = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/customer_accounts');
+            const response = await axios.get('customer_accounts');
             setCustomerAccounts(response.data);   
         } catch (error) {
             console.error('Error fetching customer accounts:', error);

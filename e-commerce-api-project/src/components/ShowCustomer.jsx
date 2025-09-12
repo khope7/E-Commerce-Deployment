@@ -15,7 +15,7 @@ const ShowCustomer = () => {
         if (id) {
             const fetchCustomerDetails = async () => {
                 try {
-                    const response = await axios.get(`http://127.0.0.1:5000/customers/by-id?id=${id}`);
+                    const response = await axios.get(`customers/by-id?id=${id}`);
                     customerArray.push(response.data)
                     setCustomer(customerArray);
                 } catch (error) {

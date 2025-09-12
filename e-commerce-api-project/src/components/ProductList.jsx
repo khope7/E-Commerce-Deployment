@@ -16,7 +16,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/products');
+            const response = await axios.get('products');
             setProducts(response.data);   
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -25,7 +25,7 @@ const ProductList = () => {
 
     const deleteProduct = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:5000/products/${id}`);
+            await axios.delete(`products/${id}`);
                 fetchProducts();
         } catch (error) {
             console.error('Error deleting product:', error);

@@ -12,7 +12,7 @@ const CustomerList = () => {
 
     const fetchCustomers = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/customers');
+            const response = await axios.get('customers');
             setCustomers(response.data);   
         } catch (error) {
             console.error('Error fetching customers:', error);
@@ -21,7 +21,7 @@ const CustomerList = () => {
 
     const deleteCustomer = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:5000/customers/${id}`);
+            await axios.delete(`customers/${id}`);
                 fetchCustomers();
         } catch (error) {
             console.error('Error deleting customer:', error);
