@@ -10,7 +10,7 @@ const CustomerAccountList = () => {
 
     const fetchCustomerAccounts = async () => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/customer_accounts`);
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/customer_accounts/`);
             setCustomerAccounts(response.data);   
         } catch (error) {
             console.error('Error fetching customer accounts:', error);

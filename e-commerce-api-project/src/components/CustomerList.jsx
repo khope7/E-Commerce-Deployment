@@ -12,7 +12,7 @@ const CustomerList = () => {
 
     const fetchCustomers = async () => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/customers`);
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/customers`);
             setCustomers(response.data);   
         } catch (error) {
             console.error('Error fetching customers:', error);
@@ -21,7 +21,7 @@ const CustomerList = () => {
 
     const deleteCustomer = async (id) => {
         try {
-            await axios.delete(`${process.env.REACT_APP_API_URL}/customers/${id}`);
+            await axios.delete(`${import.meta.env.VITE_API_URL}/customers/${id}`);
                 fetchCustomers();
         } catch (error) {
             console.error('Error deleting customer:', error);

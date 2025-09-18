@@ -25,7 +25,7 @@ const ProductForm = () => {
         if (named) {
             const fetchProductDetails = async () => {
                 try {
-                    const response = await axios.get(`${process.env.REACT_APP_API_URL}/products/by-name?name=${named}`);
+                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/products/by-name?name=${named}`);
                     setName(response.data.name);
                     setPrice(response.data.price);
                     setId(response.data.id)
@@ -55,14 +55,14 @@ const ProductForm = () => {
             const productData = { name, price };
             try {
                 if (named) {
-                    await axios.put(`${process.env.REACT_APP_API_URL}/products/${id}`, productData);
+                    await axios.put(`${import.meta.env.VITE_API_URL}/products/${id}`, productData);
                 } else {
-                    await axios.post(`${process.env.REACT_APP_API_URL}/products`, productData);
+                    await axios.post(`${import.meta.env.VITE_API_URL}/products`, productData);
                 }
                 setName('');
                 setPrice('');
                 setSubmitting(false);
-                navigate(`${process.env.REACT_APP_API_URL}/products`);
+                navigate(`${import.meta.env.VITE_API_URL}/products`);
             } catch (error) {
                 console.error('Error submitting the product:', error);
                 setError(error.toString());

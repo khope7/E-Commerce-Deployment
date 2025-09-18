@@ -31,7 +31,7 @@ const OrderForm = () => {
                 setError(null);
                 const customerData = { customer_id, date, products };
                 try {
-                    await axios.post(`${process.env.REACT_APP_API_URL}/orders`, customerData);
+                    await axios.post(`${import.meta.env.VITE_API_URL}/orders`, customerData);
                     setCustomerId(1);
                     setDate('');
                     setProductIds([]);

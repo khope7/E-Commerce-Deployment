@@ -15,7 +15,7 @@ const ShowCustomer = () => {
         if (id) {
             const fetchCustomerDetails = async () => {
                 try {
-                    const response = await axios.get(`${process.env.REACT_APP_API_URL}/customers/by-id?id=${id}`);
+                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/customers/by-id?id=${id}`);
                     customerArray.push(response.data)
                     setCustomer(customerArray);
                 } catch (error) {
