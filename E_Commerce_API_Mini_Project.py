@@ -5,9 +5,11 @@ from flask_marshmallow import Marshmallow
 from marshmallow import fields
 from marshmallow import ValidationError
 import os
+from flask_cors import CORS
 
 #Connecting to SQL Library
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
