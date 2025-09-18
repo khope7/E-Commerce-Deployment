@@ -19,7 +19,8 @@ class CustomerSchema(ma.Schema):
     name = fields.String(required=True)
     email = fields.String(required=True)
     phone = fields.String(required=True)
-    id = fields.Integer(required=True)
+    id = fields.Integer(required=True, dump_only=True)
+
 
     class Meta:
         fields = ("name", "email", "phone", "id")    
