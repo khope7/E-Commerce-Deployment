@@ -46,7 +46,7 @@ customer_accounts_schema = CustomerAccountSchema(many=True)
 class ProductSchema(ma.Schema):
     name = fields.String(required=True)
     price = fields.Float(required=True)
-    id = fields.Integer(required=True, dump_only=True)
+    id = fields.Integer(dump_only=True)
 
     class Meta:
         fields = ("name", "price", "id")
