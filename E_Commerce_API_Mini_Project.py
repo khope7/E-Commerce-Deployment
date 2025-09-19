@@ -46,7 +46,7 @@ customer_accounts_schema = CustomerAccountSchema(many=True)
 class ProductSchema(ma.Schema):
     name = fields.String(required=True)
     price = fields.Float(required=True)
-    id = fields.Integer(required=True, dump_only=True, load_default=None)
+    id = fields.Integer(required=True, dump_only=True)
 
     class Meta:
         fields = ("name", "price", "id")
@@ -234,10 +234,12 @@ def query_products_by_name():
 def add_product():
     try:
         product_data = product_schema.load(request.json)
+        print("Data Validated")
     except ValidationError as err:
         return jsonify(err.messages), 400
     
     new_product = Product(name=product_data["name"], price=product_data["price"])
+    print("Product Created")
     db.session.add(new_product)
     db.session.commit()
     return jsonify({"MESSAGE": "New product added successfully."}), 201
