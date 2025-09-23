@@ -10,7 +10,6 @@ function NavigationBar() {
             <Link to="/" activeclassname="active">Home</Link>
             <NavLink to="/add-customer" activeclassname="active">Add Customer</NavLink>
             <NavLink to="/customers" activeclassname="active">Customers</NavLink>
-            <NavLink to="/customer-accounts" activeclassname="active">Customer Accounts</NavLink>
             <NavLink to="/customer" activeclassname="active">Customer Detail</NavLink>
             <NavLink to="/add-product" activeclassname="active">Add Product</NavLink>
             <NavLink to="/products" activeclassname="active">Products</NavLink>
