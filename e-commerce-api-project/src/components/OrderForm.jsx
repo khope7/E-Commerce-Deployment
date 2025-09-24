@@ -68,7 +68,7 @@ const OrderForm = () => {
         <label>
             Products:
             {/* Unable to parse products field*/}
-            <input type="number" value={products} onChange={(e) => setProductIds(`[{"id": ${e.target.value}}]`)} />
+            <input type="number" value={products} onChange={(e) => setProductIds([{id: `${e.target.value}`}])} />
             {errors.products && <div style={{ color: 'red' }}>{errors.products}</div>}
         </label>
         <br />
