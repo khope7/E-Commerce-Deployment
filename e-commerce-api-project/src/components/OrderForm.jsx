@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 const OrderForm = () => {
     const [customer_id, setCustomerId] = useState();
     const [date, setDate] = useState('');
-    const [products, setProductIds] = useState();
+    const [products, setProductId] = useState('');
     const [errors, setErrors] = useState({});    
     const [isSubmitting, setSubmitting] = useState(false);
     const [error, setError] = useState('')
@@ -34,7 +34,7 @@ const OrderForm = () => {
                     await axios.post(`${import.meta.env.VITE_API_URL}/orders`, customerData);
                     setCustomerId(1);
                     setDate('');
-                    setProductIds([]);
+                    setProductId('');
                     setSubmitting(false);
                     navigate('/orders');
                 } catch (error) {
@@ -67,8 +67,7 @@ const OrderForm = () => {
         <br />
         <label>
             Products:
-            {/* Unable to parse products field*/}
-            <input type="number" value={products} onChange={(e) => setProductIds([{id: `${e.target.value}`}])} />
+            <input type="number" value={products} onChange={(e) => setProductId(e.target.value)} />
             {errors.products && <div style={{ color: 'red' }}>{errors.products}</div>}
         </label>
         <br />
