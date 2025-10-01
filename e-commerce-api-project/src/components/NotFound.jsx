@@ -9,7 +9,7 @@ function NotFound() {
 
         <div className="container d-grid col col-5 g-4 py-5 border rounded mt-3 justify-content-center align-items-center bg-secondary text-warning">
             <h2>404 - Not Found</h2>
-            <img src="assets/404NotFound.jpg" alt="404 Not Found" width={300} height={350}/>
+            <img src="../../public/404NotFound.jpg" alt="404 Not Found" width={300} height={350}/>
             <h4>
                 Oops! Looks like your lost traveler!
             </h4>
