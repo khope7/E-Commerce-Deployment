@@ -58,7 +58,7 @@ products_schema = ProductSchema(many=True)
 class ProductOrderSchema(ma.Schema):
     name = fields.String(required=False)
     price = fields.String(required=False)
-    id = fields.Integer(required=True, dump_only=True)
+    id = fields.String(required=True, dump_only=True)
 
     class Meta:
         fields = ("id","name","price")
