@@ -292,19 +292,21 @@ def query_orders_by_customer_id():
 
 @app.route("/orders",methods=["POST"])
 def create_order():
-  try:
-    order_data = order_schema.load(request.json)
-  except ValidationError as err:
-    return jsonify(err.messages),400
-  
-  new_order = Order(customer_id = order_data["customer_id"], date = order_data["date"])
-  for product_id in order_data["products"]:
-    product = Product.query.get_or_404(product_id["id"])
-    new_order.products.append(product)
+#   try:
+#     order_data = order_schema.load(request.json)
+#   except ValidationError as err:
+#     return jsonify(err.messages),400
 
-  db.session.add(new_order)
-  db.session.commit()
-  return jsonify({"message": "New Order Added Successfully!"}), 201
+    order_data = request.json
+  
+    new_order = Order(customer_id = order_data["customer_id"], date = order_data["date"])
+    for product_id in order_data["products"]:
+        product = Product.query.get_or_404(product_id["id"])
+        new_order.products.append(product)
+
+    db.session.add(new_order)
+    db.session.commit()
+    return jsonify({"message": "New Order Added Successfully!"}), 201
 
 
 @app.route('/orders/<int:id>', methods=['PUT'])
