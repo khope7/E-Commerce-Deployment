@@ -9,8 +9,8 @@ function NotFound() {
 
         <div className="container d-grid col col-5 g-4 py-5 border rounded mt-3 justify-content-center align-items-center bg-secondary text-warning">
             <h2>404 - Not Found</h2>
-            <img src="../assets/404NotFound.jpg" alt="404 Not Found" width={300} height={350}/>
-            <p>Oops! Looks like your lost traveler!</p>
+            <img src="../../assets/404NotFound.jpg" alt="404 Not Found" width={300} height={350}/>
+            <p>Oops! Looks like your lost traveler! Remember to hit the "show" button from your customer or orders list for this page to populate correctly.</p>
             <p>
                 You can always go back to the homepage.
             </p>
